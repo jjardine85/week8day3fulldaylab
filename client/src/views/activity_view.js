@@ -16,6 +16,11 @@ ActivityView.prototype.render = function (activity) {
   details.textContent = activity.details;
   activityContainer.appendChild(details);
 
+  const label = document.createElement('label');
+  label.for = "completed";
+  label.textContent = "Completed? ";
+  activityContainer.appendChild(label);
+
   const completed = document.createElement('input');
   completed.type="checkbox";
   completed.value = activity._id;
