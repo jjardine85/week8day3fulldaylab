@@ -47,7 +47,7 @@ Activities.prototype.putActivity = function(activityId) {
 }
 
 Activities.prototype.deleteActivity = function(activityId) {
-  this.request.delete(activityId, payload)
+  this.request.delete(activityId)
   .then((activities) => {
     PubSub.publish('Activities:data-loaded', activities);
   })
